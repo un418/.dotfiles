@@ -1,0 +1,22 @@
+# deploy_path:$ZSH_CUSTOM/42_aliases.zsh
+
+## Custom Aliases for 42
+
+alias cc42='cc -g -Wall -Wextra -Werror *.c'                   # Work only if only one .c file on folder
+alias ccrun42='cc -g -Wall -Wextra -Werror *.c && ./a.out'  # Work only if only one .c file on folder
+
+alias gcc42='gcc -g -Wall -Wextra -Werror *.c'                   # Work only if only one .c file on folder
+alias gccrun42='gcc -g -Wall -Wextra -Werror *.c && ./a.out'  # Work only if only one .c file on folder
+
+alias normi42='norminette -R CheckForbiddenSourceHeader'
+
+## --force mode like -  avoid checking error 
+alias cc42f='cc -g *.c' 
+alias ccrun42f='cc -g *.c && ./a.out'
+
+### Usefull alias from omz git plugin
+## ga -> git add
+## gcmsg -> git commit -m "$1"
+## gp -> git push
+## gst - git status
+## glola -> git log -> oneliner + pretty print

@@ -1,0 +1,6 @@
+# deploy_path:$ZSH_CUSTOM/common_functions.zsh
+
+mkcd() {
+    mkdir -p "$1"
+    cd "$1"
+}
