@@ -2,22 +2,38 @@
 
 ## Custom Aliases for 42
 
-alias cc42='cc -g -Wall -Wextra -Werror *.c'                   # Work only if only one .c file on folder
+alias cc42='cc -g -Wall -Wextra -Werror'
+#old piscine# alias cc42='cc -g -Wall -Wextra -Werror *.c'                   # Work only if only one .c file on folder
 alias ccrun42='cc -g -Wall -Wextra -Werror *.c && ./a.out'  # Work only if only one .c file on folder
 
-alias gcc42='gcc -g -Wall -Wextra -Werror *.c'                   # Work only if only one .c file on folder
+alias gcc42='gcc -g -Wall -Wextra -Werror'
+#old piscine# alias gcc42='gcc -g -Wall -Wextra -Werror *.c'                   # Work only if only one .c file on folder
 alias gccrun42='gcc -g -Wall -Wextra -Werror *.c && ./a.out'  # Work only if only one .c file on folder
 
-alias normi42='norminette -R CheckForbiddenSourceHeader'
-alias normi='norminette'
+alias norm='norminette'
+alias normlibft='norminette $(ls *.c *.h | grep -v test)'
+
 
 ## --force mode like -  avoid checking error 
-alias cc42f='cc -g *.c' 
+alias cc42f='cc -g'
 alias ccrun42f='cc -g *.c && ./a.out'
 
+## make alias
+alias mclean='make clean'
+alias mfclean='make fclean'
+alias mre='make re'
+alias mtest='make test' 
+
+## Notes mgmt - Work only on monorepo folder
+#notes updates
+alias nu='ga $(git rev-parse --show-toplevel)/_docs && gcmsg "update notes" && gp'
+
 ### Usefull alias from omz git plugin
+### cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh
 ## ga -> git add
 ## gcmsg -> git commit -m "$1"
 ## gp -> git push
 ## gst - git status
 ## glola -> git log -> oneliner + pretty print
+
+alias gcamn='git commit --amend --no-edit'
