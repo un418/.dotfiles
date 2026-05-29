@@ -26,7 +26,7 @@ alias mtest='make test'
 
 ## Notes mgmt - Work only on monorepo folder
 #notes updates
-alias nu='ga $(git rev-parse --show-toplevel)/_docs && gcmsg "update notes" && gp'
+alias nu='ga $(git rev-parse --show-toplevel)/_docs && gcmsg "_docs - update notes" && gp'
 
 ### Usefull alias from omz git plugin
 ### cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh
