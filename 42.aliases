@@ -37,3 +37,9 @@ alias nu='ga $(git rev-parse --show-toplevel)/_docs && gcmsg "_docs - update not
 ## glola -> git log -> oneliner + pretty print
 
 alias gcamn='git commit --amend --no-edit'
+
+## Valgrind
+# Usage: vg ./program [args]   — full output: leaks, errors, heap stats, 20-frame traces
+#        vgq ./program [args]  — quiet: errors and leaks only, no valgrind header
+alias vg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --num-callers=20 --error-exitcode=42'
+alias vgq='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --num-callers=20 --error-exitcode=42 -q'
