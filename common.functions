@@ -4,3 +4,10 @@ mkcd() {
     mkdir -p "$1"
     cd "$1"
 }
+
+pytest () {
+    echo " ---- flake8 ---- "
+    flake8
+    echo " ---- mypy ---- "
+    mypy --strict  .
+}

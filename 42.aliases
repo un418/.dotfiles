@@ -43,3 +43,13 @@ alias gcamn='git commit --amend --no-edit'
 #        vgq ./program [args]  — quiet: errors and leaks only, no valgrind header
 alias vg='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --num-callers=20 --error-exitcode=42'
 alias vgq='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --num-callers=20 --error-exitcode=42 -q'
+
+# Python
+
+alias python3='python3.10'
+alias py='python3.10'
+alias pyi='python3.10 -i'
+
+alias my='mypy .'
+alias mys='mypy --strict .'
+alias flk='flake8'
